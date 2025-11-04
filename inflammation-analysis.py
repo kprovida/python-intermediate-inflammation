@@ -37,3 +37,14 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     main(args)
+import numpy as np
+data = np.loadtxt(fname='data/inflammation-01.csv', delimiter=',')
+print(data.shape)
+from inflammation.models import daily_mean
+print(daily_mean(data[0:4]))
+
+
+
+
+
+
